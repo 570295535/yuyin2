@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <title>肖施主语音字幕</title>
+    <link href="https://raw.githubusercontent.com/570295535/yuyin2/master/1.css" rel="stylesheet" />
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="center" id="headline">肖施主的语音字幕</h1>
+        <div class="row">
+            <div class="col-sm-7">
+                <!-- speechAPI -->
+                <div id="info">
+                    <p id="info_start">点击麦克风图标，开始讲话</p>
+                    <p id="info_speak_now">请对着麦克风讲话</p>
+                    <p id="info_no_speech">
+                        没有检测到语音，您可能需要调整您的麦克风设置
+                    </p>
+                    <p id="info_no_microphone" style="display: none">
+                        没有找到麦克风，请确保安装了麦克风，并正确配置了麦克风。
+                    </p>
+                    <p id="info_allow">单击上面的“允许”按钮，使用您的麦克风。</p>
+                    <p id="info_denied">使用麦克风的权限被拒绝</p>
+                    <p id="info_blocked">
+                        Permission to use microphone is blocked. To change,
+                go to chrome://settings/contentExceptions#media-stream
+                    </p>
+                    <p id="info_upgrade">
+                        这个浏览器不支持Web语音接口
+                升级到<a href="https://www.google.com/chrome">谷歌浏览器</a>版本号25以上
+                    </p>
+                </div>
+                <div class="right">
+                    <button id="start_button" class="btn btn-default" onClick="startButton(event)">
+                        <i class="fa-microphone fa fa-fw fa-2x"></i>
+                    </button>
+                </div>
+                <div id="results" class="well well-sm">
+                    <span id="final_span" class="final"></span>
+                    <span id="interim_span" class="interim"></span>
+                </div>
+                        <div id="div_language" class="row">
+                            <div class="col-sm-6">
+                                <select id="select_language" class="form-control" onChange="updateCountry()"></select></div>
+                            <div class="col-sm-6">
+                                <select id="select_dialect" class="form-control"></select></div>
+                        </div>
+                        <div class="margin10"></div>
+<script src="https://raw.githubusercontent.com/570295535/yuyin2/master/1.js"></script>
+</body>
+</html>
